@@ -18,7 +18,7 @@ Build mobile apps with simple HTML, CSS, and JS components.
 
 ## Getting started
 
-* Run `npm instal ratchet-npm`
+* Run `npm install ratchet-npm`
 * `ratchet-npm` exposes the following style and font variables for you to include in your `gulpfile.js`
 
 ```
