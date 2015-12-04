@@ -1,6 +1,6 @@
 {
-  "name": "ratchet",
-  "description": "Build mobile apps with simple HTML, CSS, and JS components.",
+  "name": "ratchet-npm",
+  "description": "Build mobile apps with simple HTML, CSS, and JS components. Now with NPM",
   "version": "2.0.2",
   "keywords": [
     "css",
@@ -10,16 +10,21 @@
     "mobile",
     "prototype"
   ],
-  "homepage": "http://goratchet.com",
+  "homepage": "https://github.com/mattWillis/ratchet-npm",
   "author": "Connor Sears",
-  "style": "dist/css/ratchet.css",
-  "sass": "sass/ratchet.scss",
+  "contributors": [
+    {
+      "name": "Matthew Willis",
+      "email": "mewillis21@gmail.com"
+    }
+  ],
+  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/ratchet.git"
+    "url": "https://github.com/mattWillis/ratchet-npm.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/ratchet/issues"
+    "url": "https://github.com//mattWillis/ratchet-npm/issues"
   },
   "license": "MIT",
   "scripts": {

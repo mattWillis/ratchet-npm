@@ -18,11 +18,43 @@ Build mobile apps with simple HTML, CSS, and JS components.
 
 ## Getting started
 
-* Clone the repo with `git clone https://github.com/twbs/ratchet.git` or just [download](http://github.com/twbs/ratchet/archive/v2.0.2.zip) the bundled CSS and JS
-* [Read the docs](http://goratchet.com) to learn about the components and how to get a prototype on your phone
-* [Check out examples](http://goratchet.com/examples/)
+* Run `npm instal ratchet-npm`
+* `ratchet-npm` exposes the following style and font variables for you to include in your `gulpfile.js`
 
-Take note that our master branch is our active, unstable development branch and that if you're looking to download a stable copy of the repo, check the [tagged downloads](https://github.com/twbs/ratchet/tags).
+```
+  scss: [path.join(__dirname, 'sass')],
+  fonts: [path.join(__dirname, 'fonts/**/*.{eot,svg,ttf,woff}')],
+  baseCss: [path.join(__dirname, 'css/ratchet.min.css')],
+  iosThemeCss: [path.join(__dirname, 'css/ratchet-theme-ios.min.css')],
+  androidThemeCss: [path.join(__dirname, 'css/ratchet-theme-android.min.css')]
+```
+
+### Including SASS in gulpfile.js
+
+```
+var gulp = require('gulp');
+var $ = require('gulp-load-plugins')({});
+var ratchet = require('ratchet-npm');
+
+/* Build all styles */
+gulp.task('build-styles', function() {
+    return gulp.src('/src/**/.scss')
+  .pipe($.sass({
+    includePaths: [ratchet.scss]
+  }).on('error', $.sass.logError))
+  .pipe($.concatUtil('app.css'))
+  .pipe(gulp.dest(paths.project.dest))
+});
+```
+
+### Including JS with Browserify
+
+```
+require('ratchet-npm/dist/js/ratchet');
+
+// Do code stuff here.
+
+```
 
 ### What's included
 
